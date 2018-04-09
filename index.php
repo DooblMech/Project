@@ -9,4 +9,4 @@ foreach ($item as $data) {
 echo $head . '  ' . $text;
 }
 
-require_once(__DIR__ . '/template.php');
+
