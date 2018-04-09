@@ -4,9 +4,9 @@ require_once(__DIR__ . '/builder.php');
 
 $item = require_once(__DIR__ . '/data.php');
 foreach ($item as $data) {
-    $header = buildHeader($data['title']);
-    $content = buildContent($data['data']);
-
+    $head = buildHeader($data['title']);
+    $text = buildContent($data['data']);
+echo $head . '  ' . $text;
 }
 
 require_once(__DIR__ . '/template.php');
