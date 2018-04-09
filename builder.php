@@ -1,20 +1,22 @@
 <?php
 
+
 function buildHeader($data) : string
 {
    $data = strtoupper($data);
 
-   $out =  printf("<span style='color: red'>$data</span>");  ;
+  return printf("<span style='color: red'>$data</span>");
 
-   return $out;
-   
-}
+
+
+};
 
 function buildContent($data) : string
 {
 $d = ' ';
+
     foreach ($data as $line) {
-        $label = isset($line['label']) ? buildLabel($line['label']) : '';
+        $label = isset($line['label']) ? printf("<span style='color: green'>$data</span>") : '';
         switch ($line['type']) {
             case 'skill':
                 $d .= $label . implode(', ', $line['data']) . PHP_EOL;
@@ -23,7 +25,7 @@ $d = ' ';
                 unset($line['type']);
                 foreach ($line as $key => $value) {
                     $list = is_array($value) ? implode(', ', $value) : $value;
-                    $d .= buildLabel(ucfirst($key)) . $list . PHP_EOL;
+                    $d .=  printf("<span style='color: green'> $key </span>") . $list . PHP_EOL;
                 }
                 $d .= PHP_EOL;
                 break;
@@ -33,10 +35,3 @@ $d = ' ';
     }
     return $d;
 };
-function buildLabel($data) : string
-{
-
-    $data =  printf("<span style='color: green'>$data</span>");  ;
-
-    return $data;
-}
