@@ -1,125 +1,161 @@
 <?php
 
+
 return [
-[
-    'Key1'=>'Personal data',
-    'destination' => 'personal',
-    'data'=>[
-        'label'=>'personal data',
-        'type'=>'name',
-        'data'=>'Stukalo Anton'
-    ]
-
-
-],
     [
-    'Key1'=>'Contacts',
+        'title' => 'Personal data',
+        'destination' => 'personal',
+        'data' => [
+            [
+                'type' => 'name',
+                'label' => 'Name',
+                'data' => 'Stukalo Anton'
+            ]
+        ]
+    ],
+    [
+        'title' => 'Contacts',
         'destination' => 'contacts',
-    'data'=>[
-       [ 'label'=>'Phone',
-        'type'=>'phone',
-        'data'=>'+380637445776'
-    ],
-    [
-        'label'=>'E-mail',
-        'type'=>'mail',
-        'data'=>'wrugleys@yandex.ru'
-    ],
-    [
-        'label'=>'telegram',
-        'type'=>'telega',
-        'data'=>'@wrugleys'
-    ]
+        'data' => [
+            [
+                'type' => 'phone',
+                'label' => 'Phone',
+                'data' => '+380637445776'
+            ],
+            [
+                'type' => 'email',
+                'label' => 'E-mail',
+                'data' => 'wrugleys@yandex.ru'
+            ],
+            [
+                'type' => 'Telegram',
+                'label' => 'telegram',
+                'data' => '@wrugleys'
+            ],
+            [
+                'type' => 'address',
+                'label' => 'Address',
+                'data' => 'Kiev, borshagivska str., 144'
+            ]
         ]
     ],
     [
-        'key1'=>'Objective',
-        'destination' => 'object',
-        'data'=>[
-            'type'=>'text',
-            'data'=>'study in KPI fot 4 year and get bacalavr degree'
+        'title' => 'Objective',
+        'destination' => 'objective',
+        'data' => [
+            [
+                'type' => 'text',
+                'data' => 'Start a junior PHP developer career in Company X '
+
+            ]
         ]
     ],
     [
-        'key1'=>'Summary',
-        'destination' => 'summ',
-        'data'=>[
-            'type'=>'phone',
-            'data'=>
-            'Starting learn PHP, JS, CSS, HTML, AJAX, Jquvery'
+        'title' => 'Summary',
+        'destination' => 'summary',
+        'data' => [
+            [
+                'type' => 'text',
+                'data' => 'Starting learn PHP, JS, CSS, HTML, AJAX, Jquvery'
+            ]
         ]
     ],
-     [
-         'key1'=>'Skills',
-         'destination' => 'skills',
-         'data'=>[
-             [
-                 'type'=>'skill',
-                 'label'=>'Languages',
-                 'data'=>[ 'PHP', 'JS']
-
-                 ],
-             [
-                 'type'=>'skill',
-                 'label'=>'Frontend',
-                 'data'=>[ 'CSS', 'HTML']
-             ],
-             [
-                 'type'=>'skill',
-                 'label'=>'OS',
-                 'data'=>[ 'Windows']
-             ],
-             [
-                 'type'=>'skill',
-                 'label'=>'Frameworks',
-                 'data'=>[ 'Jqvery', 'Yii 2']
-             ]
-
-
-         ]
-     ],
     [
-        'key1'=>'Experience',
-        'destination' => 'exp',
-    'data' => [
-
-            'type' => 'list',
-            'period' => 'August 2016 - December 2016',
-            'company' => 'Kyivstar',
-            'position' => 'CallCentre',
-            'role' => 'Consultant',
-
-        ]
-        ],
-        [
-            'key1'=> 'Education',
-            'destination' => 'education',
-            'data'=>
-                [
-                    'type' => 'list',
-                    'period' => '2014 - 2018',
-                    'institution' => 'NTUU KPI',
-                    'specialty' => 'Integriren technologis machinenbaum'
-                ],
-                [
-                    'type' => 'list',
-                    'period' => 'February 2018 - May 2018',
-                    'institution' => 'Brain Academy',
-                    'specialty' => 'PHP developer'
+        'title' => 'Skills',
+        'destination' => 'skills',
+        'data' => [
+            [
+                'type' => 'item',
+                'label' => 'Programming languages',
+                'data' => [
+                    'PHP',
+                    'JavaScript'
                 ]
             ],
+            [
+                'type' => 'item',
+                'label' => 'Databases',
+                'data' => [
+                    'MySQL'
+                ]
+            ],
+            [
+                'type' => 'item',
+                'label' => 'Frontend',
+                'data' => [
+                    'HTML',
+                    'CSS'
+                ]
+            ],
+            [
+                'type' => 'item',
+                'label' => 'Servers',
+                'data' => [
+                    'Apache'
+                ]
+            ],
+            [
+                'type' => 'item',
+                'label' => 'Frameworks',
+                'data' => [
+                    'Yii 2'
+                ]
+            ],
+            [
+                'type' => 'item',
+                'label' => 'OS',
+                'data' => [
+                    'Ubuntu',
+                    'Windows'
+                ]
+            ],
+        ],
+    ],
     [
-        'key1' => 'Additional information',
-        'destination' => 'other',
+        'title' => 'Experience',
+        'destination' => 'experience',
+        'data' => [
+            [
+                'type' => 'list',
+                'period' => 'August 2016 - December 2016',
+                'company' => 'Kyivstar',
+                'position' => 'CallCentre',
+                'role' => 'Consultant',
+            ]
+        ]
+
+    ],
+    [
+        'title' => 'Education',
+        'destination' => 'education',
+        'data' => [
+            [
+                'type' => 'list',
+                'period' => '2014 - 2018',
+                'institution' => 'NTUU KPI',
+                'specialty' => 'Integriren technologis machinenbaum'
+            ],
+            [
+                'type' => 'list',
+                'period' => 'February 2018 - May 2018',
+                'institution' => 'Brain Academy',
+                'specialty' => 'PHP developer'
+            ]
+        ]
+    ],
+    [
+        'title' => 'Additional information',
+        'destination' => 'additional',
         'data' => [
             [
                 'type' => 'skill',
                 'label' => 'Languages',
-                'data' => [
-                    'English', 'Germany'
-                ]
+                'data' =>
+                    'English, Germany'
+
+
             ]
-             ]
+        ]
     ]
 
-    ];
+];
