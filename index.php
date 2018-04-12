@@ -6,7 +6,9 @@ $item = require_once(__DIR__ . '/data.php');
 foreach ($item as $data) {
     $head = buildHeader($data['title']);
     $text = buildContent($data['data']);
-echo $head . '  ' . $text;
+echo($head. ':'. "</br>". $text) ;
+echo "</br>";
+
 }
 
 
